@@ -1,4 +1,4 @@
-const toggleDoors = require("./toggleDoors.js");
+const toggleDoors = require("./openDoors.js");
 
 describe.only("Which Doors are Open?", () => {
   test("When given a number of doors, function returns an array", () => {
@@ -10,3 +10,4 @@ describe.only("Which Doors are Open?", () => {
     expect(toggleDoors(5)).toEqual([1, 4]);
     expect(toggleDoors(100)).toEqual([1, 4, 9, 16, 25, 36, 49, 64, 81, 100]);
   });
+});
