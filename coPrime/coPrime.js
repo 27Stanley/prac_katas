@@ -1,6 +1,46 @@
-const isCoPrime = (num1, num2) => {};
+const isCoPrime = (num1, num2) => {
+  let largerNum = null;
+  let smallerNum = null;
+
+  if (num1 === num2) {
+    console.log("they are the same number");
+    return false;
+  }
+
+  if (num1 % 2 === 0 && num2 % 2 === 0) {
+    console.log("they are both even numbers");
+    return false;
+  }
+
+  // identify larger number
+  if (num1 - num2 >= 0) {
+    largerNum = num1;
+    smallerNum = num2;
+    console.log(
+      `larger number is ${largerNum}, smaller number is ${smallerNum}`
+    );
+  } else {
+    largerNum = num2;
+    smallerNum = num1;
+    console.log(
+      `larger number is ${largerNum}, smaller number is ${smallerNum}`
+    );
+  }
+
+  if (largerNum % smallerNum === 0) {
+    console.log("not co prime, can be divided by each other");
+    return false;
+  }
+
+  for (let i = 3; i + 2; i < smallerNum) {
+    if
+  }
+};
 
 module.exports = isCoPrime;
+
+isCoPrime(34, 4);
+// console.log(isCoPrime(33, 3));
 
 //co prime number pairs dont have the same numbers that are divisable except for itself and 1.
 
